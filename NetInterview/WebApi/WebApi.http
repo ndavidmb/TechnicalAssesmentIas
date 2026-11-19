@@ -1,6 +1,30 @@
 @WebApi_HostAddress = http://localhost:5062
+@ExternalReference = 6f1c2c8e-1d1f-4a53-9a3f-0d1d5f3a2b11
 
-GET {{WebApi_HostAddress}}/weatherforecast/
+### Crear (201). Repetir la misma petición devuelve 200 con la misma solicitud.
+POST {{WebApi_HostAddress}}/api/service-requests
+Content-Type: application/json
+
+{
+  "externalReference": "{{ExternalReference}}",
+  "customerId": "3b0e6f0a-8f6b-4c1e-9d55-1d3c2f7e9a01",
+  "description": "Instalación de servicio"
+}
+
+### Mismo externalReference con datos distintos (409)
+POST {{WebApi_HostAddress}}/api/service-requests
+Content-Type: application/json
+
+{
+  "externalReference": "{{ExternalReference}}",
+  "customerId": "3b0e6f0a-8f6b-4c1e-9d55-1d3c2f7e9a01",
+  "description": "Otra descripción"
+}
+
+### Listar todas
+GET {{WebApi_HostAddress}}/api/service-requests
 Accept: application/json
 
-###
+### Filtrar por estado (nombre o número)
+GET {{WebApi_HostAddress}}/api/service-requests?status=Pending
+Accept: application/json

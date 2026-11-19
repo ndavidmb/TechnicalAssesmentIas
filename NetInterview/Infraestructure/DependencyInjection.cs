@@ -1,5 +1,6 @@
 using Domain.Interfaces;
 using Infraestructure.Persistence;
+using Infraestructure.Provider;
 using Infraestructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +13,13 @@ public static class DependencyInjection
     services.AddDbContext<AppDbContext>(options => options.UseNpgsql(connectionString));
     services.AddScoped<IUnitOfWork>(sp => sp.GetRequiredService<AppDbContext>());
     services.AddScoped<IServiceRequestRepository, ServiceRequestRepository>();
+    return services;
+  }
+
+  public static IServiceCollection AddSimulatedProvider(this IServiceCollection services, SimulatedProviderOptions options)
+  {
+    services.AddSingleton(options);
+    services.AddSingleton<IProviderClient, SimulatedProviderClient>();
     return services;
   }
 }
