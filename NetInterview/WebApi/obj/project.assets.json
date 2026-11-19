@@ -88,11 +88,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/ndavidmb/Documents/Projects/NetInterview/WebApi/WebApi.csproj",
+      "projectUniqueName": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/WebApi/WebApi.csproj",
       "projectName": "WebApi",
-      "projectPath": "/Users/ndavidmb/Documents/Projects/NetInterview/WebApi/WebApi.csproj",
+      "projectPath": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/WebApi/WebApi.csproj",
       "packagesPath": "/Users/ndavidmb/.nuget/packages/",
-      "outputPath": "/Users/ndavidmb/Documents/Projects/NetInterview/WebApi/obj/",
+      "outputPath": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/WebApi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/ndavidmb/.nuget/NuGet/NuGet.Config"

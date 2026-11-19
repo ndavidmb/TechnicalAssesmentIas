@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/ndavidmb/Documents/Projects/NetInterview/Application/Application.csproj": {}
+    "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/Application/Application.csproj": {}
   },
   "projects": {
-    "/Users/ndavidmb/Documents/Projects/NetInterview/Application/Application.csproj": {
+    "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/Application/Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/ndavidmb/Documents/Projects/NetInterview/Application/Application.csproj",
+        "projectUniqueName": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/Application/Application.csproj",
         "projectName": "Application",
-        "projectPath": "/Users/ndavidmb/Documents/Projects/NetInterview/Application/Application.csproj",
+        "projectPath": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/Application/Application.csproj",
         "packagesPath": "/Users/ndavidmb/.nuget/packages/",
-        "outputPath": "/Users/ndavidmb/Documents/Projects/NetInterview/Application/obj/",
+        "outputPath": "/Users/ndavidmb/Documents/Projects/TechnicalAssesmentIas/NetInterview/Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/ndavidmb/.nuget/NuGet/NuGet.Config"
