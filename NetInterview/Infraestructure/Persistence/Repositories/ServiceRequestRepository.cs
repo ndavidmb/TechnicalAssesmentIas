@@ -1,16 +1,24 @@
 using Domain.Entities;
 using Domain.Repositories;
+using Infraestructure.Persistence;
+using Microsoft.EntityFrameworkCore;
+
 namespace Infraestructure.Repositories;
 
-public class ServiceRequestRepository : IServiceRequestRepository
+public class ServiceRequestRepository(AppDbContext context) : IServiceRequestRepository
 {
-  public Task<ServiceRequest> CreateServiceRequest(ServiceRequest serviceRequest)
+  public void CreateServiceRequest(ServiceRequest serviceRequest)
   {
-    throw new NotImplementedException();
+    context.ServiceRequests.Add(serviceRequest);
   }
 
-  public Task<List<ServiceRequest>> GetAllAsync(ServiceRequestStatus? status, CancellationToken ct = default)
+  public async Task<List<ServiceRequest>> GetAllAsync(ServiceRequestStatus? status, CancellationToken ct = default)
   {
-    throw new NotImplementedException();
+    return await context.ServiceRequests.AsNoTracking().Where(s => s.Status == status).ToListAsync(cancellationToken: ct);
+  }
+
+  public async Task<ServiceRequest?> GetByIdAsync(Guid id, CancellationToken ct = default)
+  {
+    return await context.ServiceRequests.FirstOrDefaultAsync(s => s.Id == id, cancellationToken: ct);
   }
 }
